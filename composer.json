@@ -1,0 +1,52 @@
+{
+    "name": "permafrost-dev/laravel-scriptcache",
+    "description": "Allows client-side scripts to leverage the server's laravel cache",
+    "keywords": [
+        "permafrost",
+        "scripts",
+        "javascript",
+        "cache",
+        "server",
+        "laravel"
+    ],
+    "homepage": "https://github.com/permafrost-dev/laravel-scriptcache",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Trick",
+            "email": "trick.developer@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.2"
+    },
+    "require-dev": {
+        "nunomaduro/phpinsights": "dev-master",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Permafrost\\ScriptCache\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Permafrost\\ScriptCache\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Permafrost\\ScriptCache\\Providers\\ScriptCacheServiceProvider"
+            ]
+        }
+    }
+}
